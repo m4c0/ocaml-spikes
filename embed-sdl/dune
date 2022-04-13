@@ -1,0 +1,6 @@
+(executable 
+ (name test_embed)
+ (libraries sdl2)
+ (modes (native object) (native exe))
+)
+
