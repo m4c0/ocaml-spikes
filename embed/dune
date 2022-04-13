@@ -1,0 +1,5 @@
+(executable 
+ (name test_embed)
+ (modes (native object))
+)
+

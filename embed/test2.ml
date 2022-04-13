@@ -1,1 +1,1 @@
-let () = print_endline "hello embedded world 2"
+let x = print_endline "hello embedded world 2"
