@@ -1,0 +1,16 @@
+(data_only_dirs src)
+
+(rule
+ (deps (source_tree src))
+ (targets libfoo.a)
+ (action
+  (no-infer
+   (progn
+    (run cmake -B cmake_foo -S src)
+    (run cmake --build cmake_foo)
+    (copy cmake_foo/libfoo.a libfoo.a)))))
+
+(executable
+ (name test)
+ (modules test)
+ (foreign_archives foo))
